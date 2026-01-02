@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Főoldal
+---
+
+<h1>Üdvözöllek!</h1>
+
+<p>Szia! Dániel vagyok, és ez az én személyes weboldalam.</p>
+
+<h2>Legutóbbi blogbejegyzések</h2>
+
+{% if collections.posts.length > 0 %}
+<ul class="post-list">
+  {% for post in collections.posts | reverse %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <span class="post-date">{{ post.date | readableDate }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Még nincsenek blogbejegyzések. Hamarosan jönnek!</p>
+{% endif %}

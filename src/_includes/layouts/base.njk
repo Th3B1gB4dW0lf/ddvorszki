@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}Dániel Dvorszki</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
   <div class="container">
     <header>
       <nav>
-        <a href="/" class="{% if page.url == '/' %}active{% endif %}">Főoldal</a>
-        <a href="/about/" class="{% if '/about/' in page.url %}active{% endif %}">Rólam</a>
-        <a href="/cv/" class="{% if '/cv/' in page.url %}active{% endif %}">CV</a>
+        <a href="{{ '/' | url }}" class="{% if page.url == '/' %}active{% endif %}">Főoldal</a>
+        <a href="{{ '/about/' | url }}" class="{% if '/about/' in page.url %}active{% endif %}">Rólam</a>
+        <a href="{{ '/cv/' | url }}" class="{% if '/cv/' in page.url %}active{% endif %}">CV</a>
       </nav>
     </header>
 

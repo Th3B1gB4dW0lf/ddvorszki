@@ -22,6 +22,8 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    // GitHub Pages pathPrefix for project sites
+    pathPrefix: "/ddvorszki/",
     dir: {
       input: "src",
       output: "_site",
